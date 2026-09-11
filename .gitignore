@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+pipeline/data_cache/
+*.csv.gz
+*.csv
+!pipeline/fixtures/*.csv
+!pipeline/scrapers/fixtures/*.json
+.env
+infra/.env
+*.log
+node_modules/
+dist/
+.DS_Store

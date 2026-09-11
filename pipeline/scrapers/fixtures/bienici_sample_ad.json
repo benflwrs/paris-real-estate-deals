@@ -1,0 +1,284 @@
+{
+  "blurInfo": {
+    "type": "disk",
+    "radius": 50,
+    "bbox": [
+      2.40944700261597,
+      48.85420763151586,
+      2.410812274576596,
+      48.85510594945168
+    ],
+    "position": {
+      "lat": 48.85465679048377,
+      "lon": 2.410129638596283
+    },
+    "centroid": {
+      "lat": 48.85465679048377,
+      "lon": 2.410129638596283
+    }
+  },
+  "city": "Paris 20e",
+  "postalCode": "75020",
+  "chargingStations": {
+    "providers": []
+  },
+  "hasGeorisquesMention": true,
+  "id": "ag757613-548662421",
+  "adType": "buy",
+  "propertyType": "flat",
+  "reference": "JEZB6186_PF_0709_12",
+  "description": "Abriculteurs a le plaisir de vous présenter cet élégant appartement familial de 105m& dans le quartier Caronne / Porte de Vincennes.\n\nImplanté en plein centre du quartier recherché de Charonne / Porte de Vincennes, laissez-vous charmer par ce magnifique appartement familial de 105,95 m² (Loi Carrez), alliant clarté et praticité. Installé au 2ᵉ étage d'un immeuble de standing datant de 1890 et pourvu d'un ascenseur, ce 5 pièces séduit par son agencement maîtrisé et son panorama dégagé, assurant une totale intimité sans le moindre vis-à-vis.\n\nLa situation géographique est parfaite pour simplifier votre vie de tous les jours : boutiques, établissements scolaires et lieux de restauration sont accessibles en quelques minutes. La connectivité constitue également un avantage de premier plan, avec une proximité immédiate aux réseaux de transport : les lignes de bus, le tramway T3B et la ligne 9 du métro se trouvent à seulement 2 minutes de marche, tandis que la ligne 1 est accessible en 13 minutes.\n\nCe bien se compose d'une entrée avec un couloir qui dessert :\n- un double séjour de 26m2, avec tout le charme de l'ancien et de nobles matériaux : cheminée (4 au total dans l'appartement), parquet , moulures et ses grandes fenêtres (belle hauteur sous plafond de 2,67 m)\n- une cuisine aménagée très lumineuse donnant sur la cour avec un espace dînatoire\n- une jolie chambre de 12,81 m2\n- un dégagement\n- des toilettes séparées\n\nPuis, le couloir mène à une partie nuit composée :\n- une suite parentale (chambre de 14,40 m2) avec salle d'eau et toilettes,\n- une chambre ou bureau de 10,70m2\n- une spacieuse salle de bains avec fenêtre.\n\nDeux caves complètent ce bien.\n\nLes + du bien :\n- Appartement familial en bon état\n- A proximité de Nation et du quartier recherché de rue d'Avron\n- Appartement sans vis-à-vis avec du charme (plusieurs cheminée, moulures, parquet)\n- Proches des commerces, transports et écoles\n- Nombreux rangements (placards et dégagements)\n\nA noter :\n- Taxe foncière : 1.417 €\n- Charges de copropriété : 1.192 €/trimestre (eau froide, ascenseur, entretien immeuble)\n- Le bien est soumis au statut de copropriété\n- X lots d'habitation\n- Appartements lot n°106 et n°107  représentant 387/10.000èmes des parties communes générales\n- Caves lot n°127 et n°128 représentant chacune:  3/10.000èmes des parties communes générales\n\nConsommation conventionnelle (kWhEP/m2.an) : 238 (E)\nEstimation des émissions (kg CO2/m2.an) : 52 (E)\nPrix de vente : 814 000€ (Honoraires Abriculteurs à la charge du vendeur)\n\nContactez un Abriculteur au <span class=\"importDescriptionDecorator\" data-type=\"phone\">06 27 53 22 29</span> ou <span class=\"importDescriptionDecorator\" data-type=\"email\">pascale@abriculteurs.com</span>\n\nDécouvrez ce bien grâce à la visite 3D\n\nAnnonce rédigée sous la responsabilité éditoriale de Mme Pascale FERRANTI , agent commercial (EI), immatriculé au RSAC de PARIS sous le n° 900 781 139, sans détention de fonds, agissant pour le compte de la SARL Abriculteurs immobilier, au capital de 5 000 €, immatriculée sous le SIREN n° 837 704 584, titulaire de la carte professionnelle n° CPI 7501 2018 000 025 842 délivrée par la CCI de Paris Île-de-France, dont le représentant légal est M. Adrien Piot, ayant son siège social au 12 rue des Halles, 75001 Paris.\nLes informations sur les risques auxquels ce bien est exposé sont disponibles sur le site www.georisques.gouv.fr\n\nPascale FERRANTI\nRSAC PARIS 900 781 139",
+  "title": "Elégant appartement familial et lumineux de 105m2 dans le quartier Charonne/Porte de Vincennes",
+  "publicationDate": "2026-09-07T15:42:17.549Z",
+  "modificationDate": "2026-09-09T05:10:09.324Z",
+  "newProperty": false,
+  "yearOfConstruction": 1890,
+  "virtualTours": [
+    {
+      "url": "https://player.previsite.net/video/90AFC61D-562E-4F9D-B4D4-CB1BF45C4DFE",
+      "previewImageUrl": "https://player.previsite.net/poster/90AFC61D-562E-4F9D-B4D4-CB1BF45C4DFE.jpg",
+      "type": "video",
+      "highlighted": true,
+      "accepted": true,
+      "https": true,
+      "size": "responsive",
+      "mobileSupport": true,
+      "id": "ag757613-548662421_virtualTour_0"
+    },
+    {
+      "originalUrl": "https://tour.giraffe360.com/f75846b1265245b8a68fc42ffb833c35",
+      "url": "https://tour.giraffe360.com/f75846b1265245b8a68fc42ffb833c35",
+      "type": "photos 360, déplacements suivi",
+      "accepted": true,
+      "https": true,
+      "mobileSupport": true,
+      "size": "responsive",
+      "id": "ag757613-548662421_virtualTour_1"
+    }
+  ],
+  "accountType": "agency",
+  "isBienIciExclusive": false,
+  "photoWatermarkAlias": "a5c73251-cec6-4298-a139-9ec6924a391a",
+  "accountDisplayName": "Abriculteurs",
+  "surfaceArea": 105,
+  "roomsQuantity": 5,
+  "bedroomsQuantity": 3,
+  "bathroomsQuantity": 1,
+  "hasTerrace": false,
+  "hasCellar": true,
+  "showerRoomsQuantity": 1,
+  "toiletQuantity": 1,
+  "hasBalcony": false,
+  "hasFirePlace": true,
+  "floorQuantity": 7,
+  "hasElevator": true,
+  "floor": 2,
+  "energyPerformanceDiagnosticDate": "2025-04-26",
+  "energySimulationReferenceDate": "2021-01-01",
+  "energyValue": 237.3,
+  "greenhouseGazValue": 52,
+  "minEnergyConsumption": 2240,
+  "maxEnergyConsumption": 3040,
+  "energyClassification": "E",
+  "greenhouseGazClassification": "E",
+  "isInCondominium": true,
+  "annualCondominiumFees": 4767.96,
+  "condominiumPartsQuantity": 30,
+  "isCondominiumInProcedure": false,
+  "isExclusiveSaleMandate": true,
+  "feesChargedTo": "seller",
+  "priceWithoutFees": 779812,
+  "photos": [
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/1.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_1.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_1.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/2.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_2.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_2.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/3.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_3.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_3.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/4.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_4.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_4.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/5.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_5.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_5.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/6.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_6.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_6.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/7.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_7.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_7.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/8.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_8.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_8.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/9.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_9.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_9.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/10.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_10.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_10.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/11.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_11.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_11.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/12.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_12.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_12.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/13.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_13.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_13.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/14.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_14.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_14.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/15.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_15.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_15.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/16.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_16.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_16.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/17.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_17.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_17.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/18.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_18.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_18.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/19.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_19.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_19.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/20.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_20.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_20.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/21.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_21.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_21.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/22.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_22.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_22.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/23.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_23.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_23.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/24.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_24.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_24.jpg_INSOON_EB_5512801818_20260907171515"
+    },
+    {
+      "url_photo": "https://photos.ubiflow.net/757613/548662421/photos/25.jpg?INSOON_EB_5512801818_20260907171515",
+      "photo": "ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_25.jpg_INSOON_EB_5512801818_20260907171515",
+      "url": "https://file.bienici.com/photo/ag757613-548662421_photos.ubiflow.net_757613_548662421_photos_25.jpg_INSOON_EB_5512801818_20260907171515"
+    }
+  ],
+  "price": 814000,
+  "useJuly2021EnergyPerformanceDiagnostic": true,
+  "adCreatedByPro": true,
+  "heating": "gaz individuel",
+  "district": {
+    "id_polygone": 100444,
+    "id_type": 1,
+    "name": "Paris 20e Arrondissement - Saint-Blaise",
+    "libelle": "Saint-Blaise",
+    "cp": "75020",
+    "code_insee": "75120",
+    "id": 100444,
+    "insee_code": "75120",
+    "postal_code": "75020",
+    "type_id": 1
+  },
+  "with360": true,
+  "relevanceBonus": 3,
+  "status": {
+    "onTheMarket": true,
+    "closedByUser": false,
+    "autoImported": true,
+    "isLeading": false,
+    "highlighted": true,
+    "is3dHighlighted": false
+  },
+  "departmentCode": "75",
+  "addressKnown": true,
+  "displayDistrictName": true,
+  "pricePerSquareMeter": 7752.380952380952,
+  "postalCodeForSearchFilters": "75020",
+  "descriptionTextLength": 3311,
+  "userRelativeData": {
+    "importAccountId": "558bbfd06fbf04e50075bbce",
+    "accountIds": [
+      "ubiflow-easybusiness-ag757613"
+    ],
+    "searchAccountIds": [
+      "ubiflow-easybusiness-ag757613",
+      "5b587c14875049009b7f7979",
+      "contract-type-agency-performance-package",
+      "extension-boost",
+      "558bbfd06fbf04e50075bbce"
+    ],
+    "isAdmin": false,
+    "isAdModifier": false,
+    "canSetAsFeatured": false,
+    "canSeeExactPosition": false,
+    "canSeeAddress": false,
+    "canSeeStats": false,
+    "canOpenAdDetail": true,
+    "canSeeRealDates": false,
+    "canSeePublicationCertificateHtml": false,
+    "canSeePublicationCertificatePdf": false
+  },
+  "priceHasDecreased": false,
+  "transactionType": "buy",
+  "adTypeFR": "vente",
+  "with3dModel": false,
+  "endOfPromotedAsExclusive": 0,
+  "opticalFiberStatus": "deploye",
+  "nothingBehindForm": false,
+  "highlightMailContact": false,
+  "customerId": "les-abriculteurs",
+  "displayInsuranceEstimation": true,
+  "phoneDisplays": []
+}
