@@ -1,0 +1,8 @@
+# Bien'ici + PAP: light footprint, run every 6 hours.
+0 */6 * * * cd /opt/paris-deals/paris-real-estate && .venv/bin/python -m pipeline.run_all --sources bienici pap >> /opt/paris-deals/logs/scrape_light.log 2>&1
+
+# SeLoger + LeBonCoin: heavier anti-bot risk, run once daily off-peak.
+0 3 * * * cd /opt/paris-deals/paris-real-estate && .venv/bin/python -m pipeline.run_all --sources seloger leboncoin >> /opt/paris-deals/logs/scrape_heavy.log 2>&1
+
+# DVF reference data: updates semi-annually (April/October) -- refresh monthly, cheap no-op otherwise.
+0 4 1 * * cd /opt/paris-deals/paris-real-estate && .venv/bin/python -m pipeline.dvf_import >> /opt/paris-deals/logs/dvf_import.log 2>&1

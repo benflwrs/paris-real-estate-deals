@@ -13,11 +13,32 @@ and visualizes everything as heatmaps on a map.
 - [x] Phase 1.2 — Core DB schema (`db/schema.sql`)
 - [x] Phase 1.3 — DVF (official sold-transaction) importer (`pipeline/dvf_import.py`) — verified against real 2024 Paris data (median ~€10.1k/m², matches known market figures)
 - [x] Phase 1.4 — Bien'ici scraper (`pipeline/scrapers/bienici.py`) — verified live against bienici.com
-- [ ] Phase 1.5 — PAP scraper
-- [ ] Phase 1.6 — SeLoger + LeBonCoin scrapers (Playwright-based)
-- [ ] Phase 1.7 — Orchestration/scheduling
-- [ ] Phase 2 — Brain/analytics layer (value scoring, transit scoring, popularity, news watcher)
+- [x] Phase 1.5 — PAP scraper (`pipeline/scrapers/pap.py`) — parsing logic built + unit-tested; **live bypass blocked, see note below**
+- [x] Phase 1.6 — SeLoger + LeBonCoin scrapers (`pipeline/scrapers/seloger.py`, `leboncoin.py`) — parsing logic built + unit-tested; **live bypass blocked, see note below**
+- [x] Phase 1.7 — Orchestration/scheduling (`pipeline/run_all.py`, `infra/cron/scrape.cron`)
+- [x] Phase 2.3 — Value/cost-effectiveness scoring model (`pipeline/scoring/value.py`) — hedonic regression on DVF, unit-tested with synthetic data (correctly scores underpriced/overpriced/fair listings and captures zone effects)
+- [ ] Phase 2 (remaining) — transit scoring, popularity/trend scoring, news watcher
 - [ ] Phase 3 — Frontend map
+
+### ⚠️ Known blocker: PAP / SeLoger / LeBonCoin anti-bot walls
+
+All three sit behind Cloudflare (PAP) or DataDome (SeLoger, LeBonCoin) managed challenges that
+**hard-block headless Chromium from datacenter IPs**, even with `playwright-stealth` patches and a
+realistic UA/viewport/locale — confirmed by live testing from this dev sandbox. This matches what
+commercial scraping services (Apify actors, etc.) document: they require **residential proxies**
+for these three sites specifically (Bien'ici is the outlier that works from datacenter IPs with no
+proxy at all, which is why it was built and verified first).
+
+The scraper *parsing logic* for all three (`_to_listing_from_card` / `_to_listing`, JSON-LD and
+`__NEXT_DATA__` extraction) is complete and unit-tested against realistic fixtures — only the
+"get past the bot wall" step is blocked in this environment. Two ways forward, to decide with Ben:
+
+1. **Try from the VPS first** — datacenter IP reputation varies by provider/ASN; the VPS might not
+   be flagged the same way this sandbox's egress IP is. Cheapest option, worth testing first.
+2. **Add a residential/mobile proxy** — a paid service (e.g. Apify's proxy, Bright Data, etc.) if
+   (1) doesn't work. Adds ongoing cost; `base.py`-style scrapers were written with an eye toward
+   dropping in a proxy config later (see `iter_listings_from_browser` — takes a `browser_context`
+   the caller controls, so a proxied context is a drop-in change, no scraper logic rewrite needed).
 
 ## Data sources
 
