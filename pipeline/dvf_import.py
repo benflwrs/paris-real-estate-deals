@@ -42,10 +42,10 @@ INSERT INTO dvf_transactions (
 def download_department_csv(year: int, dept: str, client: Optional[httpx.Client] = None) -> bytes:
     """Download and decompress one department/year CSV. Returns raw CSV bytes."""
     own_client = client is None
-    client = client or httpx.Client(timeout=60)
+    client = client or httpx.Client(timeout=60, follow_redirects=True)
     try:
         url = f"{BASE_URL}/{year}/departements/{dept}.csv.gz"
-        resp = client.get(url)
+        resp = client.get(url, follow_redirects=True)
         resp.raise_for_status()
         return gzip.decompress(resp.content)
     finally:
