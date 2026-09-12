@@ -71,6 +71,7 @@ CREATE TABLE IF NOT EXISTS listing_scores (
   listing_id BIGINT REFERENCES listings(id) PRIMARY KEY,
   value_score NUMERIC,
   transit_score NUMERIC,
+  transit_line_score NUMERIC,        -- sum of nearby-good-line scores (Ben's methodology)
   time_to_chatelet_min NUMERIC,
   overall_score NUMERIC,
   computed_at TIMESTAMPTZ DEFAULT now()
