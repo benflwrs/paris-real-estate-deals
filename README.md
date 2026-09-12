@@ -63,8 +63,8 @@ The scraper *parsing logic* for all three (`_to_listing_from_card` / `_to_listin
 ```bash
 cd paris-real-estate
 uv sync                      # installs deps into .venv/
-cp infra/.env.example infra/.env   # edit password before any real deployment
-cd infra && docker compose up -d   # starts Postgres/PostGIS on 127.0.0.1:5432
+cp .env.example .env         # edit password before any real deployment
+docker compose up -d         # starts Postgres/PostGIS on 127.0.0.1:5432
 ```
 
 ### Run tests
@@ -90,3 +90,6 @@ python -m pipeline.dvf_import --years 2024 2025 --departments 75 92 93 94
 Target: Ben's existing VPS (23.88.42.87), as its own docker-compose project, isolated network
 from other services on that box, fully tearable down with `docker compose down -v`.
 Compiled data / DB contents stay on the VPS — only source code is pushed to this repo.
+
+`docker-compose.yml` and `.env.example` live at the repo root (required by the deploy bot).
+Cron schedule reference for the scrape/import jobs: `infra/cron/scrape.cron`.
