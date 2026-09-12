@@ -83,7 +83,7 @@ def _to_listing(ad: dict, transaction_type: str) -> Listing:
         construction_year=ad.get("yearOfConstruction"),
         is_furnished=ad.get("furnished"),
         has_balcony=ad.get("hasBalcony"),
-        has_parking=ad.get("hasParking"),
+        has_parking=(ad.get("parkingPlacesQuantity") or 0) > 0,
         dpe_class=ad.get("energyClassification"),
         address_raw=district.get("libelle") or ad.get("city"),
         postal_code=ad.get("postalCode"),

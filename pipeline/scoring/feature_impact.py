@@ -125,10 +125,10 @@ def summarize_impacts(result) -> list[dict]:
         rows.append(
             {
                 "feature": name,
-                "coefficient": round(coef, 4),
-                "approx_pct_impact": round(pct_impact, 2),
-                "p_value": round(pvalue, 4),
-                "significant_at_5pct": pvalue < 0.05,
+                "coefficient": round(float(coef), 4),
+                "approx_pct_impact": round(float(pct_impact), 2),
+                "p_value": round(float(pvalue), 4),
+                "significant_at_5pct": bool(pvalue < 0.05),
             }
         )
     return rows
