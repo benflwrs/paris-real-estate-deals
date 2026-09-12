@@ -23,22 +23,24 @@ and visualizes everything as heatmaps on a map.
 ### ⚠️ Known blocker: PAP / SeLoger / LeBonCoin anti-bot walls
 
 All three sit behind Cloudflare (PAP) or DataDome (SeLoger, LeBonCoin) managed challenges that
-**hard-block headless Chromium from datacenter IPs**, even with `playwright-stealth` patches and a
-realistic UA/viewport/locale — confirmed by live testing from this dev sandbox. This matches what
-commercial scraping services (Apify actors, etc.) document: they require **residential proxies**
-for these three sites specifically (Bien'ici is the outlier that works from datacenter IPs with no
-proxy at all, which is why it was built and verified first).
+**block headless Chromium outright, regardless of IP** — confirmed by live testing both from the
+dev sandbox AND from Ben's VPS (23.88.42.87) after fixing an unrelated font-rendering crash there
+(headless Chromium needs a full font stack — `fontconfig` + real font files + a `fonts.conf` that
+actually points at them — or it SIGTRAPs on any page with real text, which is a separate gotcha
+worth remembering for any future headless-browser deployment on a minimal VPS). Once that was
+fixed, PAP/SeLoger/LeBonCoin still never resolved past their challenge pages even from the VPS's
+own IP — this matches what commercial scraping services (Apify actors, etc.) document: they
+require **residential/mobile proxies** for these three sites specifically (Bien'ici is the
+outlier that works from datacenter IPs with no proxy at all, which is why it was built and
+verified first, and is now running end-to-end against the live production DB).
 
 The scraper *parsing logic* for all three (`_to_listing_from_card` / `_to_listing`, JSON-LD and
 `__NEXT_DATA__` extraction) is complete and unit-tested against realistic fixtures — only the
-"get past the bot wall" step is blocked in this environment. Two ways forward, to decide with Ben:
-
-1. **Try from the VPS first** — datacenter IP reputation varies by provider/ASN; the VPS might not
-   be flagged the same way this sandbox's egress IP is. Cheapest option, worth testing first.
-2. **Add a residential/mobile proxy** — a paid service (e.g. Apify's proxy, Bright Data, etc.) if
-   (1) doesn't work. Adds ongoing cost; `base.py`-style scrapers were written with an eye toward
-   dropping in a proxy config later (see `iter_listings_from_browser` — takes a `browser_context`
-   the caller controls, so a proxied context is a drop-in change, no scraper logic rewrite needed).
+"get past the bot wall" step is blocked, and it's now confirmed to need a paid residential/mobile
+proxy service (e.g. Apify's proxy, Bright Data) since VPS IP reputation didn't help. `base.py`-style
+scrapers were written with an eye toward dropping in a proxy config later (see
+`iter_listings_from_browser` — takes a `browser_context` the caller controls, so a proxied context
+is a drop-in change, no scraper logic rewrite needed).
 
 ## Data sources
 
@@ -93,3 +95,23 @@ Compiled data / DB contents stay on the VPS — only source code is pushed to th
 
 `docker-compose.yml` and `.env.example` live at the repo root (required by the deploy bot).
 Cron schedule reference for the scrape/import jobs: `infra/cron/scrape.cron`.
+
+### VPS environment notes (no-root setup)
+
+The `botop` deploy user has no sudo, so Python/Playwright dependencies not covered by `uv sync`
+are installed userspace-only via `apt-get download` + `dpkg -x` (no root needed — see the
+`linux-no-root-toolchain-setup` pattern). This matters for two things:
+
+1. **Playwright's Chromium/headless-shell binaries** need several system `.so` libs
+   (`libnspr4`, `libnss3`, X11 libs, `libavahi-*`, etc.) that aren't present on a minimal Debian
+   VPS. Download + extract them into a local prefix and export `LD_LIBRARY_PATH` to point at it.
+2. **Font rendering** — headless Chromium hard-crashes (`SIGTRAP`, Skia `SkFontMgr` fatal error)
+   on any page with real visible text if there's no fontconfig setup at all, not just a missing
+   font. Fix: extract `fontconfig-config` + `fonts-dejavu-core` (or similar) the same way, write a
+   minimal `fonts.conf` pointing `<dir>` at the extracted font path (the system default
+   `/etc/fonts/fonts.conf` points at absolute paths like `/usr/share/fonts` that don't exist in
+   this setup), and export `FONTCONFIG_PATH` to that directory.
+
+With both fixed, headless Chromium runs stably on the VPS — proven by successfully rendering
+Wikipedia and Bien'ici. It still cannot get past PAP/SeLoger/LeBonCoin's bot walls (see above);
+that is a fingerprint/IP-reputation block, unrelated to this environment setup.
