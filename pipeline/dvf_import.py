@@ -70,7 +70,13 @@ def parse_dvf_csv(csv_bytes: bytes) -> pd.DataFrame:
     df = df[df["type_local"].isin(RELEVANT_TYPES)]
     df = df.dropna(subset=["valeur_fonciere", "surface_reelle_bati", "longitude", "latitude"])
     df = df[df["valeur_fonciere"] > 0]
-    df = df[df["surface_reelle_bati"] > 0]
+    df = df[df["surface_reelle_bati"] >= 9]  # DVF has known artifacts (e.g. surface=1m2
+    # from mis-split multi-lot mutations) that blow up price/m2; 9m2 is France's legal
+    # minimum habitable surface (Loi Carrez / decent-housing floor), a reasonable cutoff.
+    price_per_m2 = df["valeur_fonciere"] / df["surface_reelle_bati"]
+    df = df[(price_per_m2 >= 500) & (price_per_m2 <= 50000)]  # drop remaining
+    # data-entry/partial-ownership outliers (e.g. a mutation covering only a share of a
+    # property, or a clear typo) that no real Ile-de-France transaction represents.
 
     out = pd.DataFrame(
         {
