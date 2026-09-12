@@ -15,9 +15,12 @@ and visualizes everything as heatmaps on a map.
 - [x] Phase 1.4 — Bien'ici scraper (`pipeline/scrapers/bienici.py`) — verified live against bienici.com
 - [x] Phase 1.5 — PAP scraper (`pipeline/scrapers/pap.py`) — parsing logic built + unit-tested; **live bypass blocked, see note below**
 - [x] Phase 1.6 — SeLoger + LeBonCoin scrapers (`pipeline/scrapers/seloger.py`, `leboncoin.py`) — parsing logic built + unit-tested; **live bypass blocked, see note below**
-- [x] Phase 1.7 — Orchestration/scheduling (`pipeline/run_all.py`, `infra/cron/scrape.cron`)
-- [x] Phase 2.3 — Value/cost-effectiveness scoring model (`pipeline/scoring/value.py`) — hedonic regression on DVF, unit-tested with synthetic data (correctly scores underpriced/overpriced/fair listings and captures zone effects)
-- [ ] Phase 2 (remaining) — transit scoring, popularity/trend scoring, news watcher
+- [x] Phase 1.7 — Orchestration/scheduling (`pipeline/run_all.py`, `infra/cron/scrape.cron`, live cron on VPS)
+- [x] Phase 2.3 — Value/cost-effectiveness scoring model (`pipeline/scoring/value.py`) — hedonic regression on DVF, verified on 159k+ real transactions
+- [x] Phase 2 — Transit LINE ranking + property score (`pipeline/scoring/transit_lines.py`, `transit_property.py`) — replaces the earlier "time to Châtelet" approach per Ben's direction: ranks every Metro/RER/Tram line by ridership + documented quality adjustments, then sums nearby-good-line scores per property (full credit ≤12min walk, half credit 12-20min)
+- [x] Phase 2 — Feature-impact regression (`pipeline/scoring/feature_impact.py`) — quantifies % price impact of floor, elevator, ground floor, balcony, parking, building age, DPE, controlling for DVF zone baseline
+- [x] Phase 2 — Zone popularity scoring (`pipeline/scoring/zone_popularity.py`) — listing velocity (demand proxy), studio/family household-mix profile, relative price tier, split by buy vs rent
+- [x] Phase 2 — News watcher (`pipeline/scoring/news_watcher.py`) — rule-based RSS (Le Journal du Grand Paris + Google News search) + French keyword matching + BAN geocoding, no LLM, live-verified finding real Grand Paris Express / urban renewal articles
 - [ ] Phase 3 — Frontend map
 
 ### ⚠️ Known blocker: PAP / SeLoger / LeBonCoin anti-bot walls
