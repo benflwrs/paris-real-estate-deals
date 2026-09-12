@@ -43,6 +43,15 @@ def test_to_listing_produces_valid_listing():
     assert listing.validate() == []
 
 
+def test_to_listing_takes_min_of_price_range_for_new_developments():
+    ad = load_fixture("bienici_sample_ad.json")
+    ad = dict(ad)
+    ad["price"] = [654200, 664000]
+    listing = _to_listing(ad, "sale")
+    assert listing.price == 654200
+    assert listing.validate() == []
+
+
 def test_price_per_m2_computed():
     ad = load_fixture("bienici_sample_ad.json")
     listing = _to_listing(ad, "sale")

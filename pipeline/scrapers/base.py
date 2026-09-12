@@ -47,7 +47,11 @@ class Listing:
 
     @property
     def price_per_m2(self) -> Optional[float]:
-        if self.price and self.surface_m2 and self.surface_m2 > 0:
+        if (
+            isinstance(self.price, (int, float))
+            and isinstance(self.surface_m2, (int, float))
+            and self.surface_m2 > 0
+        ):
             return round(self.price / self.surface_m2, 2)
         return None
 
@@ -60,9 +64,13 @@ class Listing:
             problems.append("missing url")
         if self.transaction_type not in ("sale", "rent"):
             problems.append(f"invalid transaction_type: {self.transaction_type!r}")
-        if self.price is not None and self.price < 0:
+        if self.price is not None and not isinstance(self.price, (int, float)):
+            problems.append(f"price is not numeric: {type(self.price)}")
+        elif self.price is not None and self.price < 0:
             problems.append("negative price")
-        if self.surface_m2 is not None and self.surface_m2 <= 0:
+        if self.surface_m2 is not None and not isinstance(self.surface_m2, (int, float)):
+            problems.append(f"surface_m2 is not numeric: {type(self.surface_m2)}")
+        elif self.surface_m2 is not None and self.surface_m2 <= 0:
             problems.append("non-positive surface_m2")
         return problems
 

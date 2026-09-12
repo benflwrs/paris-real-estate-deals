@@ -41,3 +41,10 @@ def test_price_per_m2_computed_correctly():
         price=200000, surface_m2=40,
     )
     assert listing.price_per_m2 == 5000.0
+
+
+def test_price_as_list_flagged_and_does_not_crash():
+    listing = Listing(source="bienici", source_id="1", url="http://x", transaction_type="sale", price=[100000, 200000])
+    problems = listing.validate()
+    assert any("not numeric" in p for p in problems)
+    assert listing.price_per_m2 is None

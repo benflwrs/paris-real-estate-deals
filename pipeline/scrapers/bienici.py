@@ -59,12 +59,19 @@ def _to_listing(ad: dict, transaction_type: str) -> Listing:
     district = ad.get("district") or {}
     insee_code = district.get("insee_code")
 
+    # New-development ("programme neuf") ads from promoters (e.g. Marignan)
+    # expose a price *range* (list) across multiple lots rather than a
+    # single price -- take the lower bound as a conservative estimate.
+    price = ad.get("price")
+    if isinstance(price, list):
+        price = min(price) if price else None
+
     return Listing(
         source="bienici",
         source_id=str(ad.get("id")),
         url=f"https://www.bienici.com/annonce/{ad.get('id')}",
         transaction_type=transaction_type,
-        price=ad.get("price"),
+        price=price,
         surface_m2=ad.get("surfaceArea"),
         rooms=ad.get("roomsQuantity"),
         bedrooms=ad.get("bedroomsQuantity"),
